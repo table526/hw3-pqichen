@@ -20,4 +20,36 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>examples</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/apache-uima-as-2.4.0/examples</locationURI>
+		</link>
+		<link>
+			<name>target/hw3-pqichen-0.0.3-SNAPSHOT-jar-with-dependencies.jar</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/target/hw3-pqichen-0.0.3-SNAPSHOT-jar-with-dependencies.jar</location>
+		</link>
+		<link>
+			<name>src/main/hw3.jar</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/java/hw3.jar</location>
+		</link>
+		<link>
+			<name>src/main/resources/NamedEntity.xml</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/NamedEntity.xml</location>
+		</link>
+		<link>
+			<name>src/main/resources/hw2clientDescriptor.xml</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw2clientDescriptor.xml</location>
+		</link>
+		<link>
+			<name>src/main/resources/hw3-pqichen-CPE-withNamedEntity.xml</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw3-pqichen-CPE-withNamedEntity.xml</location>
+		</link>
+	</linkedResources>
 </projectDescription>

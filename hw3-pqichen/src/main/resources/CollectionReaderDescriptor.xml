@@ -8,11 +8,19 @@
     <description/>
     <version>1.0</version>
     <vendor/>
-    <configurationParameters/>
+    <configurationParameters>
+      <configurationParameter>
+        <name>InputDirectory</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
         <import location="descriptors/deiis_types.xml"/>
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/SourceDocumentInformation.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
