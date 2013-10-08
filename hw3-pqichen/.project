@@ -42,14 +42,24 @@
 			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/NamedEntity.xml</location>
 		</link>
 		<link>
-			<name>src/main/resources/hw2clientDescriptor.xml</name>
-			<type>1</type>
-			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw2clientDescriptor.xml</location>
-		</link>
-		<link>
 			<name>src/main/resources/hw3-pqichen-CPE-withNamedEntity.xml</name>
 			<type>1</type>
 			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw3-pqichen-CPE-withNamedEntity.xml</location>
+		</link>
+		<link>
+			<name>src/main/resources/hw3-pqichen-aae-as-CPE.xml</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw3-pqichen-aae-as-CPE.xml</location>
+		</link>
+		<link>
+			<name>src/main/resources/hw3-pqichen-aae-client.xml</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw3-pqichen-aae-client.xml</location>
+		</link>
+		<link>
+			<name>src/main/resources/Docs/hw3-pqichen-report.pdf</name>
+			<type>1</type>
+			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/Docs/hw3-pqichen-report.pdf</location>
 		</link>
 	</linkedResources>
 </projectDescription>

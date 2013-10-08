@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TestElementAnnotatorDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/TestElementAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenAnnotatorDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/TokenAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenUniGramAnnotatorDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/TokenUniGramAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenBiGramAnnotatorDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/TokenBiGramAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenTriGramAnnotatorDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/TokenTriGramAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="GoldAnswerScorerDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/GoldAnswerScorerDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenOverlapAnswerScorerDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/TokenOverlapAnswerScorerDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramOverlapAnswerScorerDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/NGramOverlapAnswerScorerDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NamedEntityAnswerScorerDescriptor">
+      <import location="/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/NamedEntityAnswerScorerDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw3-pqichen-aae-withNamedEntity</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>TestElementAnnotatorDescriptor</node>
+        <node>TokenAnnotatorDescriptor</node>
+        <node>TokenUniGramAnnotatorDescriptor</node>
+        <node>TokenBiGramAnnotatorDescriptor</node>
+        <node>TokenTriGramAnnotatorDescriptor</node>
+        <node>GoldAnswerScorerDescriptor</node>
+        <node>TokenOverlapAnswerScorerDescriptor</node>
+        <node>NGramOverlapAnswerScorerDescriptor</node>
+        <node>NamedEntityAnswerScorerDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">uima.tcas.DocumentAnnotation</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">org.cleartk.ne.type.NamedEntityMention</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

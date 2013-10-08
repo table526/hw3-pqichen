@@ -1,0 +1,148 @@
+10/7/13 2:37:37 PM - 10: org.apache.uima.adapter.jms.service.UIMA_Service.initialize(68): INFO: UIMA-AS version 2.4.0
+10/7/13 2:37:40 PM - 10: org.apache.uima.aae.controller.BaseAnalysisEngineController.logPlatformInfo: INFO: 
++------------------------------------------------------------------
+                   Starting UIMA AS Service - PID: 31345
++------------------------------------------------------------------
++ Service Name:hw3-pqichen-aae-withNamedEntity
++ Service Queue Name:myQueueName
++ Service Start Time:07 Oct 2013 14:37:36 
++ UIMA AS Version:2.4.0
++ UIMA Core Version:2.4.0
++ OS Name:Linux
++ OS Version:3.8.0-31-generic
++ OS Architecture:amd64
++ OS CPU Count:4
++ JVM Vendor:Sun Microsystems Inc.
++ JVM Name:Java HotSpot(TM) 64-Bit Server VM
++ JVM Version:20.45-b01
++ JVM Input Args:[-DVNS_HOST=localhost, -DVNS_PORT=9000, -Duima.home=/home/pan/apache-uima-as-2.4.0, -Duima.datapath=, -Djava.util.logging.config.file=/home/pan/apache-uima-as-2.4.0/config/Logger.properties, -Duima.tools.cvd.manpath.notset, -Xms128M, -Xmx800M, -Dlog4j.configuration=file:/home/pan/apache-uima-as-2.4.0/as_config/uimaAsLog4j.properties, -DUimaBootstrapSuppressClassPathDisplay, -Dorg.apache.uima.jarpath=/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/java:/usr/java/jdk-6-sun:/home/pan/apache-uima-as-2.4.0/bin:/home/pan/apache-uima-as-2.4.0/examples/resources:/home/pan/apache-uima-as-2.4.0/lib::/home/pan/apache-uima-as-2.4.0/lib/xmlbeans:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional:.:/usr/java/jdk-6-sun/lib:/usr/java/jdk-6-sun/jre/lib]
++ JVM Classpath:/home/pan/apache-uima-as-2.4.0/lib/uimaj-bootstrap.jar
++ JVM Loaded Jars:/home/pan/apache-uima-as-2.4.0/lib/uimaj-bootstrap.jar:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/java/:/usr/java/jdk-6-sun/:/home/pan/apache-uima-as-2.4.0/bin/:/home/pan/apache-uima-as-2.4.0/examples/resources/:/home/pan/apache-uima-as-2.4.0/lib/uimaj-as-core.jar:/home/pan/apache-uima-as-2.4.0/lib/uimaj-as-activemq.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-cpe.jar:/home/pan/apache-uima-as-2.4.0/lib/uimaj-as-jms.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-core.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-examples.jar:/home/pan/apache-uima-as-2.4.0/lib/jVinci.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-document-annotation.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-adapter-soap.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-adapter-vinci.jar:/home/pan/apache-uima-as-2.4.0/lib/xmlbeans.jar:/home/pan/apache-uima-as-2.4.0/lib/uimaj-as-camel.jar:/home/pan/apache-uima-as-2.4.0/lib/uima-tools.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/activemq-all-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-asm-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-jms-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/activemq-spring-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/geronimo-jms_1.1_spec-1.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/kahadb-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/activemq-camel-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-context-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-core-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/activemq-optional-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/xbean-spring-3.7.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-beans-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/commons-logging-1.1.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/activemq-console-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-expression-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-aop-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/spring-tx-3.0.3.RELEASE.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/activemq-core-5.4.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/jetty-all-server-7.0.1.v20091125.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/geronimo-servlet_2.5_spec-1.2.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/commons-codec-1.2.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/xstream-1.3.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/commons-httpclient-3.1.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/xmlpull-1.1.3.4d_b4_min.jar:/home/pan/apache-uima-as-2.4.0/apache-activemq-5.4.1/lib/optional/log4j-1.2.14.jar:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/./:/usr/java/jdk-6-sun/lib/sa-jdi.jar:/usr/java/jdk-6-sun/lib/htmlconverter.jar:/usr/java/jdk-6-sun/lib/jconsole.jar:/usr/java/jdk-6-sun/lib/dt.jar:/usr/java/jdk-6-sun/lib/tools.jar:/usr/java/jdk-6-sun/jre/lib/javaws.jar:/usr/java/jdk-6-sun/jre/lib/deploy.jar:/usr/java/jdk-6-sun/jre/lib/jce.jar:/usr/java/jdk-6-sun/jre/lib/jsse.jar:/usr/java/jdk-6-sun/jre/lib/alt-string.jar:/usr/java/jdk-6-sun/jre/lib/management-agent.jar:/usr/java/jdk-6-sun/jre/lib/alt-rt.jar:/usr/java/jdk-6-sun/jre/lib/charsets.jar:/usr/java/jdk-6-sun/jre/lib/plugin.jar:/usr/java/jdk-6-sun/jre/lib/resources.jar:/usr/java/jdk-6-sun/jre/lib/rt.jar:
++ JVM LIB_PATH:/usr/java/jdk-6-sun/jre/lib/amd64/server:/usr/java/jdk-6-sun/jre/lib/amd64:/usr/java/jdk-6-sun/jre/../lib/amd64:/home/pan/apache-uima-as-2.4.0/uimacpp/lib:/home/pan/apache-uima-as-2.4.0/uimacpp/examples/tutorial/src::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
++------------------------------------------------------------------ 
+10/7/13 2:37:40 PM - 10: org.apache.uima.aae.controller.BaseAnalysisEngineController.C'tor: INFO: Top Level Service : hw3-pqichen-aae-withNamedEntity Configured to Use Java VM Transport For Internal Messaging
+10/7/13 2:37:40 PM - 10: org.apache.uima.adapter.jms.activemq.JmsInputChannel.setEndpointName: INFO: top_level_input_queue_service_1 Service Starting - Listening for Messages 
+10/7/13 2:37:40 PM - 10: org.apache.uima.aae.controller.BaseAnalysisEngineController.BaseAnalysisEngineController: INFO: Starting Uima EE Service On inQ_TestElementAnnotatorDescriptor_1.1
+10/7/13 2:37:40 PM - 10: org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy: WARNING: 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'primitive_ctlr_TestElementAnnotatorDescriptor_1.1' defined in URL [file:/tmp/UIMAdd2springOutput1038463258558497955.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl]: Constructor threw exception; nested exception is org.apache.uima.resource.ResourceInitializationException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:286)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:993)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:897)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy(SpringContainerDeployer.java:460)
+	at org.apache.uima.adapter.jms.service.UIMA_Service.deploy(UIMA_Service.java:168)
+	at org.apache.uima.adapter.jms.service.UIMA_Service.main(UIMA_Service.java:414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.uima.bootstrap.UimaBootstrap.main(UimaBootstrap.java:98)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl]: Constructor threw exception; nested exception is org.apache.uima.resource.ResourceInitializationException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:141)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:105)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:278)
+	... 21 more
+Caused by: org.apache.uima.resource.ResourceInitializationException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.apache.uima.resource.Resource_ImplBase.initialize(Resource_ImplBase.java:128)
+	at org.apache.uima.aae.controller.BaseAnalysisEngineController.<init>(BaseAnalysisEngineController.java:447)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:157)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:146)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:126)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:117)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:126)
+	... 23 more
+Caused by: org.apache.uima.util.InvalidXMLException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.apache.uima.resource.metadata.impl.Import_impl.findAbsoluteUrl(Import_impl.java:107)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:225)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImport(TypeSystemDescription_impl.java:265)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:229)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImport(TypeSystemDescription_impl.java:265)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:229)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:207)
+	at org.apache.uima.analysis_engine.metadata.impl.AnalysisEngineMetaData_impl.resolveImports(AnalysisEngineMetaData_impl.java:87)
+	at org.apache.uima.resource.Resource_ImplBase.initialize(Resource_ImplBase.java:126)
+	... 33 more
+
+10/7/13 2:37:40 PM - 12: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer$3.destroy: WARNING: 
+org.springframework.jms.listener.AbstractJmsListeningContainer$SharedConnectionNotInitializedException: This listener container's shared Connection has not been initialized yet
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.getSharedConnection(AbstractJmsListeningContainer.java:483)
+	at org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.access$2000(UimaDefaultMessageListenerContainer.java:69)
+	at org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer$3.run(UimaDefaultMessageListenerContainer.java:1010)
+
+10/7/13 2:37:40 PM - 11: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer$3.destroy: WARNING: 
+org.springframework.jms.listener.AbstractJmsListeningContainer$SharedConnectionNotInitializedException: This listener container's shared Connection has not been initialized yet
+	at org.springframework.jms.listener.AbstractJmsListeningContainer.getSharedConnection(AbstractJmsListeningContainer.java:483)
+	at org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.access$2000(UimaDefaultMessageListenerContainer.java:69)
+	at org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer$3.run(UimaDefaultMessageListenerContainer.java:1010)
+
+10/7/13 2:37:40 PM - 10: org.apache.uima.adapter.jms.service.UIMA_Service.main: WARNING: 
+org.apache.uima.resource.ResourceInitializationException
+	at org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy(SpringContainerDeployer.java:475)
+	at org.apache.uima.adapter.jms.service.UIMA_Service.deploy(UIMA_Service.java:168)
+	at org.apache.uima.adapter.jms.service.UIMA_Service.main(UIMA_Service.java:414)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.uima.bootstrap.UimaBootstrap.main(UimaBootstrap.java:98)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'primitive_ctlr_TestElementAnnotatorDescriptor_1.1' defined in URL [file:/tmp/UIMAdd2springOutput1038463258558497955.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl]: Constructor threw exception; nested exception is org.apache.uima.resource.ResourceInitializationException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:286)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:993)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:897)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy(SpringContainerDeployer.java:460)
+	... 7 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl]: Constructor threw exception; nested exception is org.apache.uima.resource.ResourceInitializationException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:141)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:105)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:278)
+	... 21 more
+Caused by: org.apache.uima.resource.ResourceInitializationException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.apache.uima.resource.Resource_ImplBase.initialize(Resource_ImplBase.java:128)
+	at org.apache.uima.aae.controller.BaseAnalysisEngineController.<init>(BaseAnalysisEngineController.java:447)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:157)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:146)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:126)
+	at org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.<init>(PrimitiveAnalysisEngineController_impl.java:117)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:126)
+	... 23 more
+Caused by: org.apache.uima.util.InvalidXMLException: An import could not be resolved.  No .xml file with name "org.cleartk.ne.type.Ace2005Document" was found in the class path or data path. (Descriptor: file:/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/cleartk-type-system/org/cleartk/ne/TypeSystem.xml)
+	at org.apache.uima.resource.metadata.impl.Import_impl.findAbsoluteUrl(Import_impl.java:107)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:225)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImport(TypeSystemDescription_impl.java:265)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:229)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImport(TypeSystemDescription_impl.java:265)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:229)
+	at org.apache.uima.resource.metadata.impl.TypeSystemDescription_impl.resolveImports(TypeSystemDescription_impl.java:207)
+	at org.apache.uima.analysis_engine.metadata.impl.AnalysisEngineMetaData_impl.resolveImports(AnalysisEngineMetaData_impl.java:87)
+	at org.apache.uima.resource.Resource_ImplBase.initialize(Resource_ImplBase.java:126)
+	... 33 more
+

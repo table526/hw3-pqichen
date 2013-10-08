@@ -1,18 +1,19 @@
 /*
  * @author Qichen Pan (Andrew_Id: pqichen)
  * 
- * Evaluator: This class is responsible for evaluating the performance of three algorithms.
+ * Evaluator_withNamedEntity: This class is responsible for evaluating the performance of four algorithms.
  * 
- * It serves as the CasConsumer in CPE pipeline (CasConsumerDescriptor).
+ * It serves as the CasConsumer in CPE pipeline (CasConsumerDescriptor_withNamedEntity, hw3-pqichen-aae-as-CPE).
  * 
  * It first retrieves Gold_AS info to get the right answer number say 'n'.
  * 
- * It then sorts the two other AnswerScore_List and picks the top n ones.
+ * It then sorts the three other AnswerScore_List and picks the top n ones.
  * 
  * It calculate the precision of three different algorithms and output them on the screen.
  * 
- * The precisions are stored in precision_TokenOverlap, precision_NGramOverlap, precision_Gold.
+ * The precisions are stored in precision_TokenOverlap, precision_NGramOverlap, precision_NamedEntity, precision_Gold.
  * 
+ * It needs information from NamedEntityAnswerScorer which gets annotators from remote StanfordNLP.
  */
 
 package org.apache.uima.tools.components;
@@ -56,7 +57,7 @@ import edu.cmu.deiis.types.AnswerScore;
  * <li><code>OutputDirectory</code> - path to directory into which output files will be written</li>
  * </ul>
  */
-public class Evaluator extends CasConsumer_ImplBase {
+public class Evaluator_withNamedEntity extends CasConsumer_ImplBase {
   /**
    * Name of configuration parameter that must be set to the path of a directory into which the
    * output files will be written.
@@ -115,7 +116,7 @@ public class Evaluator extends CasConsumer_ImplBase {
       AS[pos] = (AnswerScore)AS_Iter.next();
       pos++;
     }
-    int Gold_AS_num = 0, Token_AS_num = 0, NGram_AS_num = 0;
+    int Gold_AS_num = 0, Token_AS_num = 0, NGram_AS_num = 0, NEM_AS_num = 0;
     for(int i = 0; i < AS.length; i++)
     {
       if(AS[i].getCasProcessorId().equals("GoldAnswerScorer"))
@@ -127,6 +128,9 @@ public class Evaluator extends CasConsumer_ImplBase {
       }else if(AS[i].getCasProcessorId().equals("NGramOverlapAnswerScorer"))
       {
         NGram_AS_num++;
+      }else if(AS[i].getCasProcessorId().equals("NamedEntityAnswerScorer"))
+      {
+        NEM_AS_num++;
       }
     }
    
@@ -134,7 +138,8 @@ public class Evaluator extends CasConsumer_ImplBase {
     AnswerScore [] Gold_AS = new AnswerScore[Gold_AS_num];
     AnswerScore [] Token_AS = new AnswerScore[Token_AS_num];
     AnswerScore [] NGram_AS = new AnswerScore[NGram_AS_num];
-    Gold_AS_num = 0; Token_AS_num = 0; NGram_AS_num = 0;
+    AnswerScore [] NEM_AS = new AnswerScore[NEM_AS_num];
+    Gold_AS_num = 0; Token_AS_num = 0; NGram_AS_num = 0; NEM_AS_num = 0;
     for(int i = 0; i < AS.length; i++)
     {
       if(AS[i].getCasProcessorId().equals("GoldAnswerScorer"))
@@ -149,6 +154,10 @@ public class Evaluator extends CasConsumer_ImplBase {
       {
         NGram_AS[NGram_AS_num] = AS[i];
         NGram_AS_num++;
+      }else if(AS[i].getCasProcessorId().equals("NamedEntityAnswerScorer"))
+      {
+        NEM_AS[NEM_AS_num] = AS[i];
+        NEM_AS_num++;
       }
     }
     
@@ -222,11 +231,40 @@ public class Evaluator extends CasConsumer_ImplBase {
     }
     double precision_NGramOverlap = (double)pred_true / (double)Correct_Num;
     
+    // Calculate Precision of NamedEntity Method.
+    tmp = 0.0;
+    judge = true;
+    pred_true = 0;
+    boolean [] sign_nem = new boolean[NEM_AS.length];
+    for(int k = 0; k < sign_nem.length; k++)
+    {
+      sign_nem[k] = false;
+    }
+    for(int i = 0; i < Correct_Num; i++)
+    {
+      sign = -1;
+      judge = false;
+      for(int j = 0; j < NEM_AS.length; j++)
+      {
+        if(tmp <= NEM_AS[j].getScore() && sign_nem[j] == false)
+        {
+          tmp = NEM_AS[j].getScore();
+          judge = NEM_AS[j].getAnswer().getIsCorrect();
+          sign = j;
+        }
+      }
+      sign_nem[sign] = true;
+      if(judge == true)
+        pred_true++;
+      tmp = 0.0;
+    }
+    double precision_NamedEntity = (double)pred_true / (double)Correct_Num;
  // print out results.
     double precision_Gold = 1.00;
     System.out.println("Gold_AnswerScore_Precision:\t" + precision_Gold + "\n" 
             + "TokenOverlap_AnswerScore_Precision:\t" + precision_TokenOverlap + "\n"
-            + "NGramOverlap_AnswerScore_Precision:\t" + precision_NGramOverlap + "\n");
+            + "NGramOverlap_AnswerScore_Precision:\t" + precision_NGramOverlap + "\n"
+            + "NamedEntity_AnswerScore_Precision:\t" + precision_NamedEntity + "\n");
   }
 
   
