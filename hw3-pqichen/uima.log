@@ -206,3 +206,9 @@
 	 Max Deserialization Time: 60 ms 
 	 Max Analysis Time: 100 ms 
 	 Total Idle Time: 23,790.49 ms
+10/7/13 11:09:59 PM - 22: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.onException: WARNING: Service: hw3-pqichen-aae-withNamedEntity Runtime Exception  
+10/7/13 11:09:59 PM - 22: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.onException: WARNING: Jms Listener Failed. Endpoint: myQueueName Managed By: tcp://localhost:61616 Reason: javax.jms.JMSException: java.io.EOFException
+10/7/13 11:09:59 PM - 22: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.handleListenerSetupFailure: WARNING: Uima AS Service:hw3-pqichen-aae-withNamedEntity Listener Unable To Connect To Broker: tcp://localhost:61616 Retrying ...  
+10/7/13 11:09:59 PM - 23: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.onException: WARNING: Service: hw3-pqichen-aae-withNamedEntity Runtime Exception  
+10/7/13 11:09:59 PM - 23: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.onException: WARNING: Jms Listener Failed. Endpoint: myQueueName Managed By: tcp://localhost:61616 Reason: javax.jms.JMSException: java.io.EOFException
+10/7/13 11:09:59 PM - 23: org.apache.uima.adapter.jms.activemq.UimaDefaultMessageListenerContainer.handleListenerSetupFailure: WARNING: Uima AS Service:hw3-pqichen-aae-withNamedEntity Listener Unable To Connect To Broker: tcp://localhost:61616 Retrying ...  
