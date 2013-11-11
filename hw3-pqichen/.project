@@ -56,10 +56,5 @@
 			<type>1</type>
 			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/hw3-pqichen-aae-client.xml</location>
 		</link>
-		<link>
-			<name>src/main/resources/Docs/hw3-pqichen-report.pdf</name>
-			<type>1</type>
-			<location>/home/pan/git/hw3-pqichen/hw3-pqichen/src/main/resources/Docs/hw3-pqichen-report.pdf</location>
-		</link>
 	</linkedResources>
 </projectDescription>
